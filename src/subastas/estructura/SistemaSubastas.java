@@ -216,5 +216,18 @@ public class SistemaSubastas {
         }
 
     }
+    //Este es auxiliar para listar productos.
+    public void listarTodo() {
+
+        System.out.println("\n--- LISTA DE PRODUCTOS ---");
+
+        for (Producto p : mapaProductos.values()) {
+
+            String estado = p.isSubastaActiva() ? "[ABIERTA] " : "[CERRADA] ";
+            System.out.println(estado + " " + p);
+
+        }
+
+    }
 
 }
